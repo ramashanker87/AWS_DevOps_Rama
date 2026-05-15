@@ -1,12 +1,17 @@
-# Day 13 – Helm + Scaling
+## Day 13 — 03-Jun-2026 (Wednesday)
 
-## Topics
+### Module
+**Module 2 – Infrastructure as Code (IaC)**
 
-    Helm charts
-    Application scaling
-    Production Kubernetes patterns
+### Theory
+- Policy as Code
+- IaC security
 
-## Lab
+### Lab
+- Security scanning
+- Automated IaC pipelines
 
-    Deploy using Helm
-    Configure auto-scaling
+### AWS Resources
+- Security Hub
+- CodePipeline
+- IAM

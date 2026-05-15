@@ -1,12 +1,17 @@
-# Day 14 – GitOps Fundamentals
+## Day 14 — 04-Jun-2026 (Thursday)
 
-## Topics
+### Module
+**Module 3 – Containerization & Registry Management**
 
-    GitOps principles
-    Deployment automation using Argo CD
-    Progressive delivery
+### Theory
+- Docker architecture
+- Container lifecycle
 
-## Lab
+### Lab
+- Docker installation
+- Container management
 
-    Deploy application using ArgoCD
-    Configure automated updates
+### AWS Resources
+- EC2
+- Docker Engine
+- Cloud9

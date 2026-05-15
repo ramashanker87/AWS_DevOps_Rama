@@ -1,12 +1,18 @@
-# Day 11 – Kubernetes Fundamentals
+## Day 10 — 29-May-2026 (Friday)
 
-## Topics
+### Module
+**Module 2 – Infrastructure as Code (IaC)**
 
-    Kubernetes architecture
-    Pods, services, deployments
-    Scaling
+### Theory
+- Advanced CloudFormation
+- Nested Stacks
+- StackSets
 
-## Lab
+### Lab
+- Multi-environment provisioning labs
 
-    Deploy app on Kubernetes locally
-    Create deployment + service
+### AWS Resources
+- CloudFormation
+- StackSets
+- S3
+- CloudTrail

@@ -1,12 +1,19 @@
-# Day 5 – Deployment Strategies
+## Day 5 — 22-May-2026 (Friday)
 
-## Topics
+### Module
+**Module 1 – DevOps & CI/CD Fundamentals**
 
-    Blue/Green deployments
-    Canary deployments
-    Rolling deployments
+### Theory
+- AWS CodeDeploy
+- Deployment strategies
 
-## Lab
+### Lab
+- Blue/Green deployments
+- Canary deployments
 
-    Implement Blue/Green deployment in AWS
-    Test rollback scenario
+### AWS Resources
+- CodeDeploy
+- EC2
+- ECS
+- ELB
+- Auto Scaling

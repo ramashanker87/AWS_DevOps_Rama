@@ -1,12 +1,18 @@
-# Day 18 – Logging + Tracing
+## Day 18 — 10-Jun-2026 (Wednesday)
 
-## Topics
+### Module
+**Module 4 – Kubernetes with Amazon EKS**
 
-    Distributed tracing
-    Centralized logging
-    Observability pipelines
+### Theory
+- EKS setup
+- Cluster management
 
-## Lab
+### Lab
+- EKS provisioning
+- Networking setup
 
-    Implement centralized logging
-    Configure tracing
+### AWS Resources
+- EKS
+- VPC
+- IAM
+- CloudFormation

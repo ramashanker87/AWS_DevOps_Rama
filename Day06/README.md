@@ -1,12 +1,17 @@
-# Day 6 – CloudFormation
+## Day 6 — 25-May-2026 (Monday)
 
-## Topics
+### Module
+**Module 1 – DevOps & CI/CD Fundamentals**
 
-    Infrastructure as Code concepts
-    CloudFormation templates
-    Parameters, stacks, automation
+### Theory
+- AWS CodePipeline
+- CI/CD orchestration
 
-## Lab
+### Lab
+- Complete CI/CD pipeline implementation
 
-    Deploy VPC using CloudFormation
-    Create reusable templates
+### AWS Resources
+- CodePipeline
+- CodeBuild
+- CodeDeploy
+- SNS

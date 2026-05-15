@@ -1,12 +1,16 @@
-# Day 9 – Docker Fundamentals
+## Day 9 — 28-May-2026 (Thursday)
 
-## Topics
+### Module
+**Module 2 – Infrastructure as Code (IaC)**
 
-    Containerization architecture
-    Docker images and optimization
-    Multi-stage builds
+### Theory
+- IaC concepts
+- CloudFormation basics
 
-## Lab
+### Lab
+- CloudFormation template creation
 
-    Create Dockerfile
-    Build optimized container image using Docker
+### AWS Resources
+- CloudFormation
+- EC2
+- VPC

@@ -1,12 +1,17 @@
-# Day 12 – Amazon EKS
+## Day 12 — 02-Jun-2026 (Tuesday)
 
-## Topics
+### Module
+**Module 2 – Infrastructure as Code (IaC)**
 
-    Kubernetes on AWS
-    Cluster setup
-    Networking and security
+### Theory
+- Terraform modules
+- State management
 
-## Lab
+### Lab
+- Module creation
+- Remote state management
 
-    Create EKS cluster
-    Deploy application to EKS
+### AWS Resources
+- S3
+- DynamoDB
+- Terraform Cloud

@@ -1,12 +1,18 @@
-# Day 3 – CI/CD Pipelines (AWS Native)
 
-## Topics
+## Day 3 — 20-May-2026 (Wednesday)
 
-    CodePipeline architecture
-    Deployment automation using AWS CodeDeploy
-    Build automation pipelines
+### Module
+**Module 1 – DevOps & CI/CD Fundamentals**
 
-## Lab
+### Theory
+- AWS CodeCommit
+- Repository management
 
-    Create a CI/CD pipeline
-    Deploy a simple application automatically
+### Lab
+- CodeCommit integration
+- Repository configuration
+
+### AWS Resources
+- CodeCommit
+- CloudWatch Logs
+- IAM

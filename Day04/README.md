@@ -1,12 +1,18 @@
-# Day 4 – Third-Party CI/CD Integration
+## Day 4 — 21-May-2026 (Thursday)
 
-## Topics
+### Module
+**Module 1 – DevOps & CI/CD Fundamentals**
 
-    Integrating GitHub Actions
-    Integrating Jenkins
-    Testing and quality gates
+### Theory
+- AWS CodeBuild architecture
+- Build automation
 
-## Lab
+### Lab
+- Buildspec creation
+- Automated builds
 
-    Build pipeline using GitHub Actions
-    Automated testing integration
+### AWS Resources
+- CodeBuild
+- S3
+- IAM
+- CloudWatch

@@ -1,13 +1,22 @@
-# Day 1 – Program Kick-off + Pre-Assessment
 
-## Topics
+## Day 1 — 18-May-2026 (Monday)
 
-    DevOps fundamentals and CALMS model
-    CI/CD overview
-    AWS DevOps ecosystem
-    Pre-assessment
+### Module
+**Module 1 – DevOps & CI/CD Fundamentals**
 
-## Lab
+### Theory
+- Introduction to DevOps
+- CALMS Framework
+- Agile & SDLC Basics
 
-    AWS account environment setup
-    Git installation and repository setup
+### Lab
+- Git installation
+- Repository setup
+- Branching exercises
+
+### AWS Resources
+- EC2
+- IAM
+- Cloud9
+- GitHub
+- AWS CLI

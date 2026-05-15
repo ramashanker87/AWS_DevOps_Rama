@@ -1,12 +1,19 @@
-# Day 19 – Production Readiness
+## Day 19 — 11-Jun-2026 (Thursday)
 
-## Topics
+### Module
+**Module 4 – Kubernetes with Amazon EKS**
 
-    Multi-region architecture
-    Disaster recovery
-    Cost optimization
+### Theory
+- Kubernetes storage
+- Networking
+- Security
 
-## Lab
+### Lab
+- Persistent storage
+- Ingress configuration
 
-    Multi-region deployment
-    Backup + failover setup
+### AWS Resources
+- EBS
+- EFS
+- Route53
+- EKS

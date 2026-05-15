@@ -1,12 +1,18 @@
-# Day 7 – Terraform Fundamentals
+## Day 7 — 26-May-2026 (Tuesday)
 
-## Topics
+### Module
+**Module 1 – DevOps & CI/CD Fundamentals**
 
-    Terraform architecture
-    Providers, state management
-    Terraform vs CloudFormation
+### Theory
+- Jenkins
+- GitHub Actions
+- GitLab CI integration
 
-## Lab
+### Lab
+- Third-party CI/CD integration labs
 
-    Create infrastructure using Terraform
-    Deploy EC2 + networking
+### AWS Resources
+- Jenkins
+- GitHub Actions
+- GitLab CI
+- EC2

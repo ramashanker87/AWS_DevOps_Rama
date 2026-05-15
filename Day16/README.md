@@ -1,12 +1,18 @@
-# Day 16 – DevSecOps
+## Day 16 — 08-Jun-2026 (Monday)
 
-## Topics
+### Module
+**Module 3 – Containerization & Registry Management**
 
-    Security in pipelines
-    IAM best practices
-    Security automation
+### Theory
+- ECS
+- Fargate deployment models
 
-## Lab
+### Lab
+- ECS cluster
+- Fargate deployment
 
-    Secure CI/CD pipeline
-    Secrets management
+### AWS Resources
+- ECS
+- Fargate
+- ELB
+- CloudWatch

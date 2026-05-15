@@ -1,12 +1,19 @@
-# Day 8 – IaC in CI/CD
+## Day 8 — 27-May-2026 (Wednesday)
 
-## Topics
+### Module
+**Module 1 – DevOps & CI/CD Fundamentals**
 
-    Terraform modules
-    Automated infrastructure pipelines
-    Policy-as-Code
+### Theory
+- Testing automation
+- Quality gates
+- SonarQube
 
-## Lab
+### Lab
+- Automated testing
+- Quality validation
 
-    Terraform pipeline using CodePipeline
-    Security validation in IaC
+### AWS Resources
+- SonarQube
+- CodeBuild
+- S3
+- IAM

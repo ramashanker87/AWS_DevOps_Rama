@@ -1,12 +1,17 @@
-# Day 15 – Advanced Deployment Patterns
+## Day 15 — 05-Jun-2026 (Friday)
 
-## Topics
+### Module
+**Module 3 – Containerization & Registry Management**
 
-    Canary releases
-    Progressive delivery
-    Blue/Green with Kubernetes
+### Theory
+- Docker optimization
+- Amazon ECR
 
-## Lab
+### Lab
+- Multi-stage builds
+- ECR publishing
 
-    Implement progressive deployment in EKS
-    Traffic shifting
+### AWS Resources
+- Amazon ECR
+- Inspector
+- IAM

@@ -1,12 +1,18 @@
-# Day 17 – Monitoring + Observability
+## Day 17 — 09-Jun-2026 (Tuesday)
 
-## Topics
+### Module
+**Module 4 – Kubernetes with Amazon EKS**
 
-    Monitoring using Amazon CloudWatch
-    Logging architecture
-    Observability tools like Prometheus and Grafana
+### Theory
+- Kubernetes architecture
+- Core concepts
 
-## Lab
+### Lab
+- Kubernetes deployments
+- Services
 
-    Create dashboards
-    Configure alerts and logs
+### AWS Resources
+- EKS
+- EC2
+- kubectl
+- IAM

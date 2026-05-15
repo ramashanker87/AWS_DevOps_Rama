@@ -1,12 +1,17 @@
-# Day 20 – Final Assessment + Project Setup
+## Day 20 — 12-Jun-2026 (Friday)
 
-## Topics
+### Module
+**Module 4 – Kubernetes with Amazon EKS**
 
-    Post-assessment
-    Capstone project briefing
-    End-to-end architecture planning
+### Theory
+- Helm charts
+- Scaling strategies
 
-## Lab
+### Lab
+- Helm deployments
+- Autoscaling labs
 
-    Start capstone project
-    Design CI/CD + IaC + Kubernetes architecture
+### AWS Resources
+- Helm
+- EKS
+- Auto Scaling

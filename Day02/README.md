@@ -1,13 +1,19 @@
-# Day 2 – Git + DevOps Workflow
+## Day 2 — 19-May-2026 (Tuesday)
 
-## Topics
+### Module
+**Module 1 – DevOps & CI/CD Fundamentals**
 
-    Git branching strategies
-    CI/CD architecture
-    Introduction to AWS CodePipeline and AWS CodeBuild
+### Theory
+- CI/CD concepts
+- Git workflows
+- Merge/Rebase strategies
 
-## Lab
+### Lab
+- Git workflows
+- Pull requests
+- Branch protection rules
 
-    Create Git repository
-    Branching + pull request workflow
-    Trigger first automated build
+### AWS Resources
+- GitHub
+- CodeCommit
+- IAM
