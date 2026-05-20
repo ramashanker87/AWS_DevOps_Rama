@@ -67,6 +67,11 @@ Output Format
 ```
 
 ---
+    Verify
+
+```
+aws sts get-caller-identity --profile devops
+```
 
 # Part 2: Create IAM Policy
 
@@ -97,6 +102,18 @@ Use JSON:
 }
 ```
 
+## Step 3 — Configure Git credential helper
+
+    Run these commands:
+``` 
+aws sts get-caller-identity --profile devops
+git config --global credential.helper '!aws codecommit credential-helper $@'
+git config --global credential.UseHttpPath true
+export AWS_PROFILE=devops
+
+windows
+$env:AWS_PROFILE="codecommit"
+```
 ---
 
 # Part 3: Create CodeCommit Repository
@@ -131,7 +148,7 @@ Create Repository
 ```bash
 aws codecommit create-repository \
 --repository-name DevOpsRepo \
---repository-description "DevOps Training Repository"
+--repository-description "DevOps Training Repository" --profile devops
 ```
 
 ---
@@ -193,7 +210,7 @@ git commit -m "Initial commit"
 ## Push to CodeCommit
 
 ```bash
-git push origin main
+git push origin master
 ```
 
 ---
@@ -268,13 +285,82 @@ Repository → Settings
 
 # Configure Notifications
 
-Enable:
+    Notification Rule Configuration
+    Notification name
 
-- Repository activity notifications
-- Pull request alerts
-- Merge notifications
+    Keep:
+    
+    DevOpsRepo-Notifications
+    Detail type
 
----
+    Select:
+    
+    Full
+
+    Reason:
+    
+    Includes commit details
+    Pull request information
+    Better troubleshooting visibility
+    Events That Trigger Notifications
+    Enable these options
+    Comments
+
+    ✅ On commits
+    ✅ On pull requests
+    
+    Approvals
+    
+    ✅ Status changed
+    
+    Pull request
+    
+    ✅ Source updated
+    ✅ Created
+    ✅ Status changed
+    ✅ Merged
+
+    Branches and tags
+    
+    ✅ Created
+    ✅ Deleted
+    ✅ Updated
+    
+    Targets
+    Choose target type
+    
+    Select:
+    
+    SNS topic
+    Create SNS Target
+
+    Click:
+    
+    Create target
+    
+    Then:
+    
+    Target name
+    
+    Example:
+    
+    DevOpsRepoAlerts
+    Email notifications
+
+    After the SNS topic is created:
+    
+    Open Amazon SNS
+    Go to:
+    Topics → DevOpsRepoAlerts
+    Create subscription:
+    Protocol: Email
+    Endpoint: your-email@example.com
+    Confirm the email subscription from your inbox.
+    Final Step
+    
+    Click:
+    
+    Create rule
 
 # Part 10: Enable CloudTrail Logging
 
@@ -295,25 +381,6 @@ Enable:
 
 ---
 
-# Part 11: Monitor Logs in CloudWatch
-
-## Navigate to CloudWatch
-
-```text
-CloudWatch → Logs
-```
-
----
-
-## View Logs
-
-Monitor:
-
-- Repository access
-- Git operations
-- Authentication logs
-
----
 
 # Part 12: Simulate Repository Activity
 

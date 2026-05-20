@@ -1,0 +1,13 @@
+```txt
+========================
+USER LOGIN DETAILS
+========================
+
+Username: admin
+Password: Admin@123
+
+Username: developer
+Password: DevOps@456
+
+Username: tester
+Password: Test@789

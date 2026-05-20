@@ -1,0 +1,22 @@
+========================
+PAYMENT RECORDS
+========================
+
+Invoice ID : INV1001
+Customer   : John Doe
+Amount     : $250
+Status     : Paid
+
+--------------------------------
+
+Invoice ID : INV1002
+Customer   : Alice Smith
+Amount     : $450
+Status     : Pending
+
+--------------------------------
+
+Invoice ID : INV1003
+Customer   : Bob Johnson
+Amount     : $150
+Status     : Paid
