@@ -114,6 +114,7 @@ artifacts:
 
 ---
 
+
 # Understanding buildspec.yml
 
 | Section | Purpose |
