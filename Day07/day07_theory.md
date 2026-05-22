@@ -1,19 +1,18 @@
 # Day 7 – DevOps Theory
 
 ## Module 1 – DevOps & CI/CD Fundamentals
-
 ### Date: 26-May-2026 (Tuesday)
 
 ---
 
-# Topic: Third-Party CI/CD Tools
-
-## Topics Covered
+# Topics Covered
 
 - Jenkins
 - GitHub Actions
-- GitLab CI integration
-- CI/CD integration with AWS EC2
+- CI/CD Pipelines
+- GitHub Actions Integration with AWS
+- AWS EC2 Deployments
+- DevOps Automation
 
 ---
 
@@ -21,56 +20,55 @@
 
 CI/CD stands for:
 
-- **Continuous Integration**
-- **Continuous Delivery**
-- **Continuous Deployment**
+- Continuous Integration
+- Continuous Delivery
+- Continuous Deployment
 
-CI/CD is a DevOps practice used to automate software build, test, and deployment processes.
+CI/CD automates software development workflows including:
+
+- Code integration
+- Testing
+- Building
+- Deployment
+- Monitoring
 
 ---
 
-## Continuous Integration
+# Benefits of CI/CD
 
-Continuous Integration means developers frequently merge code changes into a shared repository.
+- Faster releases
+- Reduced manual work
+- Early bug detection
+- Improved software quality
+- Reliable deployments
+- Better collaboration
 
-Every code change can automatically trigger:
+---
 
-- Code checkout
-- Dependency installation
+# Continuous Integration (CI)
+
+Continuous Integration means developers frequently push code changes to a shared repository.
+
+Each code change automatically triggers:
+
 - Build process
 - Unit testing
-- Static code analysis
-- Artifact creation
-
-### Benefits of Continuous Integration
-
-- Early bug detection
-- Faster development feedback
-- Reduced integration issues
-- Improved code quality
-- Better team collaboration
+- Code validation
+- Security scanning
 
 ---
 
-## Continuous Delivery
+# Continuous Delivery (CD)
 
-Continuous Delivery means the application is always kept ready for deployment.
+Continuous Delivery ensures software is always ready for deployment.
 
-The deployment may still require manual approval before releasing to production.
-
-### Example
-
-Code is automatically built and tested, but a DevOps engineer manually approves deployment to production.
+Deployment may still require manual approval.
 
 ---
 
-## Continuous Deployment
+# Continuous Deployment
 
-Continuous Deployment means every successful code change is automatically deployed to production without manual approval.
-
-### Example
-
-A developer pushes code to GitHub. If all tests pass, the application is automatically deployed to an AWS EC2 instance.
+Continuous Deployment automatically deploys changes to production after successful testing.
 
 ---
 
@@ -78,141 +76,83 @@ A developer pushes code to GitHub. If all tests pass, the application is automat
 
 ## What is Jenkins?
 
-Jenkins is an open-source automation server widely used for CI/CD pipelines.
+Jenkins is an open-source automation server used for CI/CD pipelines.
 
-It helps automate:
+Jenkins automates:
 
-- Building applications
-- Running tests
-- Creating artifacts
-- Deploying applications
-- Integrating with cloud platforms
-- Running scheduled jobs
-
----
-
-## Why Jenkins is Used
-
-Jenkins is popular because it is:
-
-- Open source
-- Extensible using plugins
-- Supports many programming languages
-- Supports distributed builds
-- Integrates with GitHub, GitLab, Docker, AWS, Kubernetes, Maven, Gradle, and many other tools
+- Code builds
+- Testing
+- Packaging
+- Deployments
+- Infrastructure automation
 
 ---
 
-## Jenkins Architecture
+# Jenkins Architecture
 
-Jenkins architecture usually contains:
+Jenkins contains:
 
-- Jenkins Controller
-- Jenkins Agents
+- Controller
+- Agents
 - Jobs
 - Pipelines
 - Plugins
-- Credentials
 
 ---
 
-## Jenkins Controller
+# Jenkins Controller
 
-The Jenkins Controller is the main Jenkins server.
+The controller manages:
 
-It manages:
-
-- User interface
-- Job configuration
-- Plugin management
+- Jobs
+- Users
+- Plugins
 - Build scheduling
-- Pipeline orchestration
 
 ---
 
-## Jenkins Agent
+# Jenkins Agents
 
-A Jenkins Agent is a worker machine that executes build or deployment tasks.
+Agents execute build and deployment tasks.
 
-Agents help distribute workload across multiple machines.
-
-### Example
-
-The Jenkins Controller runs on one EC2 instance, while agents run on separate EC2 instances to execute jobs.
+They distribute workload across multiple systems.
 
 ---
 
-## Jenkins Job
+# Jenkins Pipelines
 
-A Jenkins job is a task configured in Jenkins.
+Jenkins pipelines automate workflows.
 
-Types of jobs include:
-
-- Freestyle project
-- Pipeline job
-- Multibranch pipeline
-- Maven project
-
----
-
-## Jenkins Pipeline
-
-A Jenkins pipeline is a set of automated steps written as code.
-
-Pipeline files are usually written in a file called:
+Pipeline stages commonly include:
 
 ```text
-Jenkinsfile
+Checkout → Build → Test → Deploy
 ```
 
 ---
 
-## Jenkins Pipeline Stages
-
-A common Jenkins pipeline includes:
-
-```text
-Checkout → Build → Test → Package → Deploy
-```
-
-Example stages:
-
-- Checkout source code from Git
-- Install dependencies
-- Run tests
-- Build application
-- Deploy application to AWS EC2
-
----
-
-## Jenkinsfile Example
+# Jenkinsfile Example
 
 ```groovy
 pipeline {
     agent any
 
     stages {
-        stage('Checkout') {
-            steps {
-                git 'https://github.com/example/repo.git'
-            }
-        }
-
         stage('Build') {
             steps {
-                sh 'echo Building application'
+                sh 'echo Building Application'
             }
         }
 
         stage('Test') {
             steps {
-                sh 'echo Running tests'
+                sh 'echo Running Tests'
             }
         }
 
         stage('Deploy') {
             steps {
-                sh 'echo Deploying application'
+                sh 'echo Deploying Application'
             }
         }
     }
@@ -221,52 +161,30 @@ pipeline {
 
 ---
 
-## Jenkins Plugins
+# Jenkins Plugins
 
-Plugins extend Jenkins functionality.
-
-Common plugins:
+Popular plugins:
 
 | Plugin | Purpose |
 |---|---|
-| Git Plugin | Integrates Jenkins with Git repositories |
-| GitHub Plugin | Connects Jenkins with GitHub |
-| Pipeline Plugin | Enables Jenkins pipeline as code |
-| SSH Agent Plugin | Allows SSH-based deployment |
-| AWS Credentials Plugin | Stores AWS credentials securely |
-| Docker Plugin | Integrates Jenkins with Docker |
+| Git Plugin | Git integration |
+| Pipeline Plugin | Pipeline support |
+| SSH Plugin | Remote deployment |
+| Docker Plugin | Docker integration |
+| AWS Plugin | AWS integration |
 
 ---
 
-## Jenkins Credentials
+# Jenkins Integration with AWS
 
-Jenkins Credentials are used to securely store sensitive information such as:
-
-- SSH keys
-- Passwords
-- AWS access keys
-- GitHub tokens
-- Docker registry credentials
-
-Credentials should never be hardcoded inside pipeline scripts.
-
----
-
-## Jenkins Integration with AWS
-
-Jenkins can integrate with AWS services such as:
+Jenkins can integrate with:
 
 - EC2
+- ECS
+- ECR
 - S3
 - CodeDeploy
-- ECR
-- ECS
 - CloudFormation
-- IAM
-
-### Example Use Case
-
-Jenkins builds application code and deploys it to an EC2 instance using SSH.
 
 ---
 
@@ -274,107 +192,49 @@ Jenkins builds application code and deploys it to an EC2 instance using SSH.
 
 ## What is GitHub Actions?
 
-GitHub Actions is a CI/CD platform built directly into GitHub.
+GitHub Actions is GitHub's built-in CI/CD platform.
 
-It allows users to automate workflows directly from a GitHub repository.
-
-GitHub Actions can automate:
-
-- Code build
-- Unit testing
-- Security scanning
-- Docker image creation
-- Deployment to AWS
-- Notifications
+It automates workflows directly from GitHub repositories.
 
 ---
 
-## GitHub Actions Workflow
+# GitHub Actions Features
 
-A GitHub Actions workflow is defined using YAML files.
+- Automated builds
+- Automated testing
+- Deployment automation
+- Docker integration
+- AWS integration
+- Secret management
 
-Workflow files are stored inside:
+---
+
+# Workflow File Location
+
+Workflow files are stored in:
 
 ```text
 .github/workflows/
 ```
 
-Example file:
-
-```text
-.github/workflows/deploy.yml
-```
-
 ---
 
-## Key GitHub Actions Concepts
+# GitHub Actions Concepts
 
 | Concept | Description |
 |---|---|
-| Workflow | Complete automation process |
-| Event | Trigger that starts workflow |
-| Job | Group of steps executed on a runner |
-| Step | Individual command or action |
-| Runner | Machine that executes the workflow |
+| Workflow | Automation process |
+| Job | Group of steps |
+| Step | Individual task |
+| Runner | Machine executing workflow |
 | Action | Reusable automation component |
 
 ---
 
-## GitHub Actions Events
-
-A workflow can be triggered by events such as:
-
-- push
-- pull_request
-- workflow_dispatch
-- schedule
-
-### Example
+# Workflow Example
 
 ```yaml
-on:
-  push:
-    branches:
-      - main
-```
-
-This means the workflow runs whenever code is pushed to the main branch.
-
----
-
-## GitHub Actions Runner
-
-A runner is a machine that executes GitHub Actions jobs.
-
-Types of runners:
-
-- GitHub-hosted runner
-- Self-hosted runner
-
-### GitHub-hosted Runner
-
-Managed by GitHub.
-
-Example:
-
-```yaml
-runs-on: ubuntu-latest
-```
-
-### Self-hosted Runner
-
-Installed and managed by the user.
-
-Example use case:
-
-- Running workflows on an AWS EC2 instance inside a private network
-
----
-
-## GitHub Actions Workflow Example
-
-```yaml
-name: Simple CI Pipeline
+name: CI Pipeline
 
 on:
   push:
@@ -389,203 +249,159 @@ jobs:
       - name: Checkout Code
         uses: actions/checkout@v4
 
-      - name: Build Application
+      - name: Build
         run: echo "Building application"
 
-      - name: Run Tests
+      - name: Test
         run: echo "Running tests"
 ```
 
 ---
 
-## GitHub Actions Integration with AWS
+# GitHub Actions Runners
 
-GitHub Actions can deploy to AWS using:
+Types:
 
-- AWS access keys
-- IAM roles with OIDC
-- AWS CLI
-- AWS CodeDeploy
-- AWS ECS
-- AWS S3
-
-### Recommended Method
-
-Use OpenID Connect, also called OIDC, instead of long-term AWS access keys.
-
-OIDC allows GitHub Actions to assume an AWS IAM role securely.
+- GitHub-hosted runners
+- Self-hosted runners
 
 ---
 
-## Advantages of GitHub Actions
+# GitHub Actions Secrets
 
-- Integrated with GitHub
-- Easy YAML-based workflow
-- Large marketplace of reusable actions
-- Good for open-source and cloud-native projects
-- Supports many deployment targets
+Secrets securely store sensitive data:
 
----
+- SSH keys
+- AWS credentials
+- API tokens
 
-# 4. GitLab CI
-
-## What is GitLab CI?
-
-GitLab CI/CD is a built-in CI/CD platform provided by GitLab.
-
-It allows teams to automate build, test, and deployment processes directly from GitLab repositories.
+Secrets are encrypted and hidden in workflow logs.
 
 ---
 
-## GitLab CI Pipeline File
+# GitHub Actions with AWS
 
-GitLab CI uses a YAML file named:
+GitHub Actions integrates with AWS services:
 
-```text
-.gitlab-ci.yml
-```
-
-This file is placed in the root of the repository.
-
----
-
-## GitLab CI Concepts
-
-| Concept | Description |
-|---|---|
-| Pipeline | Complete CI/CD process |
-| Stage | Logical phase such as build, test, deploy |
-| Job | Task executed inside a stage |
-| Runner | Machine that executes jobs |
-| Artifact | Output generated by a job |
-| Variable | Configuration or secret value |
-
----
-
-## GitLab CI Stages
-
-Common stages:
-
-```text
-build → test → deploy
-```
-
----
-
-## GitLab CI Example
-
-```yaml
-stages:
-  - build
-  - test
-  - deploy
-
-build-job:
-  stage: build
-  script:
-    - echo "Building application"
-
-test-job:
-  stage: test
-  script:
-    - echo "Running tests"
-
-deploy-job:
-  stage: deploy
-  script:
-    - echo "Deploying application"
-```
-
----
-
-## GitLab Runner
-
-GitLab Runner is the agent that executes GitLab CI jobs.
-
-Runner types:
-
-- Shared runner
-- Specific runner
-- Group runner
-- Self-managed runner
-
-A self-managed GitLab Runner can be installed on AWS EC2.
-
----
-
-## GitLab CI Integration with AWS
-
-GitLab CI can deploy applications to AWS using:
-
-- AWS CLI
-- SSH
-- CodeDeploy
+- EC2
 - ECS
-- EKS
+- ECR
 - S3
-- CloudFormation
-
-### Example Use Case
-
-GitLab CI builds an application and deploys it to an EC2 instance using SSH.
+- Lambda
+- CodeDeploy
 
 ---
 
-# 5. Jenkins vs GitHub Actions vs GitLab CI
+# GitHub Actions Deployment Flow
 
-| Feature | Jenkins | GitHub Actions | GitLab CI |
-|---|---|---|---|
-| Hosting | Self-managed | GitHub-managed or self-hosted | GitLab-managed or self-hosted |
-| Configuration | Jenkinsfile | YAML workflow | .gitlab-ci.yml |
-| Plugin ecosystem | Very large | Marketplace actions | Built-in integrations |
-| Setup effort | Medium to high | Low | Low to medium |
-| Best for | Enterprise/custom pipelines | GitHub projects | GitLab projects |
-| AWS integration | Strong | Strong | Strong |
+Typical deployment flow:
+
+```text
+Developer Pushes Code
+        ↓
+GitHub Actions Workflow Triggered
+        ↓
+Build & Test
+        ↓
+Deploy to AWS EC2
+```
 
 ---
 
-# 6. Best Practices
+# 4. GitHub Actions vs Jenkins
+
+| Feature | Jenkins | GitHub Actions |
+|---|---|---|
+| Hosting | Self-managed | GitHub-managed |
+| Configuration | Jenkinsfile | YAML |
+| Plugin ecosystem | Large | Marketplace Actions |
+| Setup effort | Medium | Easy |
+| Cloud-native support | Good | Excellent |
+| GitHub integration | Plugin-based | Native |
+
+---
+
+# 5. AWS EC2 in CI/CD
+
+EC2 instances are commonly used as deployment targets.
+
+Applications deployed to EC2 may include:
+
+- Web applications
+- APIs
+- Docker containers
+- Backend services
+
+---
+
+# CI/CD Deployment Process to EC2
+
+Typical process:
+
+1. Developer pushes code
+2. CI pipeline starts
+3. Tests execute
+4. Application builds
+5. SSH deployment to EC2
+6. Service restart
+7. Validation
+
+---
+
+# 6. SSH-Based Deployment
+
+CI/CD tools commonly deploy using SSH.
+
+Example deployment command:
+
+```bash
+scp index.html ec2-user@<EC2-IP>:/tmp/
+```
+
+Remote deployment:
+
+```bash
+ssh ec2-user@<EC2-IP>
+```
+
+---
+
+# 7. Best Practices
 
 ## Jenkins Best Practices
 
 - Use pipelines as code
-- Store Jenkinsfile in source control
-- Use credentials securely
-- Use agents for build execution
-- Keep Jenkins plugins updated
-- Avoid running builds on controller when possible
+- Secure credentials
+- Use agents
+- Keep plugins updated
 
 ---
 
 ## GitHub Actions Best Practices
 
-- Use secrets for sensitive data
-- Use OIDC for AWS authentication
-- Keep workflows modular
-- Use branch protection rules
-- Use manual approval for production
-- Pin action versions where possible
+- Store secrets securely
+- Use reusable workflows
+- Use branch protection
+- Use environment approvals
 
 ---
 
-## GitLab CI Best Practices
+## AWS Deployment Best Practices
 
-- Store pipeline configuration in `.gitlab-ci.yml`
-- Use CI/CD variables for secrets
-- Use separate environments for dev, staging, and production
-- Use artifacts for build outputs
-- Use manual approval for production deployments
+- Restrict SSH access
+- Use IAM roles
+- Use staging environments
+- Enable monitoring
+- Use rollback strategies
 
 ---
 
-# 7. Summary
+# 8. Summary
 
-In this theory session, you learned:
+In this module you learned:
 
-- What CI/CD means
-- Difference between Continuous Integration, Delivery, and Deployment
-- Jenkins architecture and pipelines
+- CI/CD fundamentals
+- Jenkins pipelines
 - GitHub Actions workflows
-- GitLab CI pipelines
-- How third-party CI/CD tools integrate with AWS
-- Best practices for secure and reliable CI/CD
+- AWS EC2 deployment automation
+- CI/CD best practices
