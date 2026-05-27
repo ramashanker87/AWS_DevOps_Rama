@@ -1,18 +1,16 @@
-## Day 10 — 29-May-2026 (Friday)
+## Day 11 — 20-May-2026 (Monday)
 
 ### Module
 **Module 2 – Infrastructure as Code (IaC)**
 
 ### Theory
-- Advanced CloudFormation
-- Nested Stacks
-- StackSets
+- Terraform fundamentals and architecture
 
 ### Lab
-- Multi-environment provisioning labs
+- AWS infrastructure provisioning with Terraform
 
 ### AWS Resources
-- CloudFormation
-- StackSets
-- S3
-- CloudTrail
+-EC2, 
+-VPC, 
+-Terraform CLI, 
+-IAM

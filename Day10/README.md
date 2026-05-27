@@ -1,12 +1,18 @@
-# Day 10 – Container Registry + ECS
+## Day 10 — 29-May-2026 (Friday)
 
-## Topics
+### Module
+**Module 2 – Infrastructure as Code (IaC)**
 
-    Amazon ECR
-    Container security
-    Deploying containers on Amazon ECS
+### Theory
+- Advanced CloudFormation
+- Nested Stacks
+- StackSets
 
-## Lab
+### Lab
+- Multi-environment provisioning labs
 
-    Push container to ECR
-    Deploy container to ECS
+### AWS Resources
+- CloudFormation
+- StackSets
+- S3
+- CloudTrail
