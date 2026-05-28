@@ -79,7 +79,7 @@ Outputs:
 # Step 3 — Validate Template
 
 ```bash
-aws cloudformation validate-template --template-body file://s3-stack.yaml
+aws cloudformation validate-template --template-body file://s3-stack.yaml --profile devops
 ```
 
 ---
@@ -87,7 +87,7 @@ aws cloudformation validate-template --template-body file://s3-stack.yaml
 # Step 4 — Deploy Stack
 
 ```bash
-aws cloudformation create-stack --stack-name s3-demo-stack --template-body file://s3-stack.yaml --parameters ParameterKey=EnvironmentName,ParameterValue=dev
+aws cloudformation create-stack --stack-name s3-demo-stack --template-body file://s3-stack.yaml --parameters ParameterKey=EnvironmentName,ParameterValue=dev --profile devops
 ```
 
 ---
@@ -95,7 +95,7 @@ aws cloudformation create-stack --stack-name s3-demo-stack --template-body file:
 # Step 5 — Verify Deployment
 
 ```bash
-aws cloudformation describe-stacks --stack-name s3-demo-stack
+aws cloudformation describe-stacks --stack-name s3-demo-stack --profile devops
 ```
 
 ---
@@ -124,7 +124,7 @@ Resources:
 # Step 2 — Create S3 Bucket
 
 ```bash
-aws s3 mb s3://cf-template-storage-demo
+aws s3 mb s3://cf-template-storage-demo --profile devops
 ```
 
 ---
@@ -132,7 +132,7 @@ aws s3 mb s3://cf-template-storage-demo
 # Step 3 — Upload Child Template
 
 ```bash
-aws s3 cp network.yaml s3://cf-template-storage-demo/
+aws s3 cp network.yaml s3://cf-template-storage-demo/ --profile devops
 ```
 
 ---
@@ -159,7 +159,7 @@ Resources:
 # Step 5 — Deploy Parent Stack
 
 ```bash
-aws cloudformation create-stack --stack-name parent-stack --template-body file://parent-stack.yaml
+aws cloudformation create-stack --stack-name parent-stack --template-body file://parent-stack.yaml --profile devops
 ```
 
 ---
@@ -169,7 +169,7 @@ aws cloudformation create-stack --stack-name parent-stack --template-body file:/
 ## Deploy Dev Environment
 
 ```bash
-aws cloudformation create-stack --stack-name dev-stack --template-body file://environment-stack.yaml --parameters ParameterKey=Environment,ParameterValue=dev
+aws cloudformation create-stack --stack-name dev-stack --template-body file://environment-stack.yaml --parameters ParameterKey=Environment,ParameterValue=dev --profile devops
 ```
 
 ---
@@ -177,7 +177,7 @@ aws cloudformation create-stack --stack-name dev-stack --template-body file://en
 ## Deploy Test Environment
 
 ```bash
-aws cloudformation create-stack --stack-name test-stack --template-body file://environment-stack.yaml --parameters ParameterKey=Environment,ParameterValue=test
+aws cloudformation create-stack --stack-name test-stack --template-body file://environment-stack.yaml --parameters ParameterKey=Environment,ParameterValue=test --profile devops
 ```
 
 ---
@@ -185,7 +185,7 @@ aws cloudformation create-stack --stack-name test-stack --template-body file://e
 ## Deploy Prod Environment
 
 ```bash
-aws cloudformation create-stack --stack-name prod-stack --template-body file://environment-stack.yaml --parameters ParameterKey=Environment,ParameterValue=prod
+aws cloudformation create-stack --stack-name prod-stack --template-body file://environment-stack.yaml --parameters ParameterKey=Environment,ParameterValue=prod --profile devops
 ```
 
 ---
@@ -217,23 +217,23 @@ Resources:
 # Cleanup Commands
 
 ```bash
-aws cloudformation delete-stack --stack-name s3-demo-stack
+aws cloudformation delete-stack --stack-name s3-demo-stack --profile devops
 ```
 
 ```bash
-aws cloudformation delete-stack --stack-name parent-stack
+aws cloudformation delete-stack --stack-name parent-stack --profile devops
 ```
 
 ```bash
-aws cloudformation delete-stack --stack-name dev-stack
+aws cloudformation delete-stack --stack-name dev-stack --profile devops
 ```
 
 ```bash
-aws cloudformation delete-stack --stack-name test-stack
+aws cloudformation delete-stack --stack-name test-stack --profile devops
 ```
 
 ```bash
-aws cloudformation delete-stack --stack-name prod-stack
+aws cloudformation delete-stack --stack-name prod-stack --profile devops
 ```
 
 ---
