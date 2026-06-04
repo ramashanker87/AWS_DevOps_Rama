@@ -193,6 +193,7 @@ terraform {
 
 provider "aws" {
   region = var.aws_region
+  profile = "devops"
 }
 ```
 
@@ -362,7 +363,7 @@ yes
 Use AWS CLI:
 
 ```bash
-aws s3 ls
+aws s3 ls --profile devops
 ```
 
 Check bucket versioning:

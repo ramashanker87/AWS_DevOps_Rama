@@ -421,6 +421,9 @@ tfsec .
 echo "Running Checkov..."
 checkov -d .
 
+echo "Initialize Terraform..."
+terraform init
+
 echo "Generating Terraform plan..."
 terraform plan
 ```
