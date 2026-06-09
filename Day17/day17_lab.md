@@ -50,7 +50,7 @@ aws sts get-caller-identity
 List Clusters:
 
 ```bash
-aws eks list-clusters
+aws eks list-clusters 
 ```
 
 Describe Cluster:
