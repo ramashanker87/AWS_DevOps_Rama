@@ -1,0 +1,14 @@
+apiVersion: eksctl.io/v1alpha5
+kind: ClusterConfig
+
+metadata:
+  name: day-22-rama-eks-cluster
+  region: us-east-1
+
+addonsConfig:
+  autoApplyPodIdentityAssociations: true
+
+addons:
+  - name: eks-pod-identity-agent
+  - name: vpc-cni
+    useDefaultPodIdentityAssociations: true
